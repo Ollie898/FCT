@@ -22,9 +22,11 @@ button {
   border-radius: 5px;
 }
 
-#LAResult,
-#SeattleResult,
-#MiamiResult,
-#ChicagoResult {
+#ninjaResult,
+#sypherpkResult,
+#stableronaldoResult,
+#jynxyResult,
+#kaicenatResult,
+#adinrossResult {
   display: none;
 }

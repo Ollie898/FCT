@@ -2,54 +2,92 @@
 'use strict';
 
 function resetResult() {
-    document.getElementById("LAResult").style.display = "none";
-    document.getElementById("SeattleResult").style.display = "none";
-    document.getElementById("MiamiResult").style.display = "none";
-    document.getElementById("ChicagoResult").style.display = "none";
+    document.getElementById("adinrossResult").style.display = "none";
+    document.getElementById("jynxyResult").style.display = "none";
+    document.getElementById("stableronaldoResult").style.display = "none";
+    document.getElementById("ninjaResult").style.display = "none";
+    document.getElementById("kaicenatResult").style.display = "none";
+    document.getElementById("sypherpkResult").style.display = "none";
 }
 
 function seeResult() {
-    var LA = 0;
-    var Seattle = 0;
-    var Miami = 0;
-    var Chicago = 0;
+    var adinross = 0;
+    var jynxy = 0;
+    var stableronaldo = 0;
+    var ninja = 0;
+    var kaicenat = 0;
+    var sypherpk = 0;
 
-    if (document.getElementById("hot").checked) {
-        LA += 1;
-        Miami += 1;
-    } else if (document.getElementById("cold").checked) {
-        Chicago += 1;
+    if (document.getElementById("kick").checked) {
+        adinross += 1;
+    } else if (document.getElementById("youtube").checked) {
+        sypherpk += 1;
     } else {
-        Seattle += 1;
+        jynxy += 1;
+        stableronaldo += 1;
+        ninja += 1;
+        kaicenat += 1;
     }
 
-    if (document.getElementById("bus").checked) {
-        Miami += 1;
-    } else if (document.getElementById("car").checked) {
-        LA += 1;
+    if (document.getElementById("fort").checked) {
+        ninja += 1;
+        sypherpk += 1;
+        stableronaldo += 1;
+    } else if (document.getElementById("r6").checked) {
+        jynxy += 1;
     } else {
-        Seattle += 1;
-        Chicago += 1;
+        adinross += 1;
+        kaicenat += 1;
     }
 
-    if (document.getElementById("walk").checked) {
-        Seattle += 1;
-        Miami += 1;
-    } else if (document.getElementById("drive").checked) {
-        LA += 1;
+    if (document.getElementById("payphone").checked) {
+        stableronaldo += 1;
+        sypherpk += 1;
+    } else if (document.getElementById("lowtaper").checked) {
+        ninja += 1;
     } else {
-        Chicago += 1;
+        kaicenat += 1;
+        jynxy += 1;
+        adinross += 1;
+    }
+
+    if (document.getElementById("bleached").checked) {
+        jynxy += 1;
+        adinross += 1
+    } else if (document.getElementById("lowtaperfade").checked) {
+        ninja += 1;
+        stableronaldo += 1;
+        sypherpk += 1;
+    } else {
+        kaicenat += 1;
+       
+    }
+
+    if (document.getElementById("johnson").checked) {
+        jynxy += 1;
+    } else if (document.getElementById("rizz").checked) {
+        ninja += 1;
+        kaicenat += 1;
+        adinross += 1;
+    } else {
+        stableronaldo += 1;
+        sypherpk += 1;
     }
 
     resetResult();
 
-    if (LA > Seattle && LA > Miami && LA > Chicago) {
-        document.getElementById("LAResult").style.display = "block";
-    } else if (Seattle > LA && Seattle > Miami && Seattle > Chicago) {
-        document.getElementById("SeattleResult").style.display = "block";
-    } else if (Miami > LA && Miami > Seattle && Miami > Chicago) {
-        document.getElementById("MiamiResult").style.display = "block";
-    } else {
-        document.getElementById("ChicagoResult").style.display = "block";
+    if (jynxy > ninja && jynxy > kaicenat && jynxy > adinross && jynxy > stableronaldo && jynxy > sypherpk) {
+        document.getElementById("jynxyResult").style.display = "block";
+    } else if (ninja > jynxy && ninja > kaicenat && ninja > adinross && ninja > stableronaldo && ninja > sypherpk) {
+        document.getElementById("ninjaResult").style.display = "block";
+    } else if (kaicenat > ninja && kaicenat > kaicenat && jynxy > adinross && kaicenat > stableronaldo && kaicenat > sypherpk) {
+        document.getElementById("kaicenatResult").style.display = "block";
+    } else if (adinross > ninja && adinross > kaicenat && adinross > jynxy && adinross > stableronaldo && adinross > sypherpk) {
+        document.getElementById("adinrossResult").style.display = "block";
+    } else if (stableronaldo > ninja && stableronaldo > kaicenat && stableronaldo > adinross && stableronaldo > jynxy && stableronaldo > sypherpk) {
+        document.getElementById("stableronaldoResult").style.display = "block";
+    } else if (sypherpk > ninja && sypherpk > kaicenat && sypherpk > adinross && sypherpk > stableronaldo && sypherpk > jynxy) {
+        document.getElementById("sypherpkResult").style.display = "block";
+   
     }
 }
